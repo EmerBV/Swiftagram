@@ -10,6 +10,7 @@
 		7930AE402A4B628F00B28F40 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7930AE3F2A4B628F00B28F40 /* ProfileView.swift */; };
 		7930AE432A4B6F0B00B28F40 /* UserStatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7930AE422A4B6F0B00B28F40 /* UserStatView.swift */; };
 		793C32E52A4CB7DE006E23A3 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793C32E42A4CB7DE006E23A3 /* SearchView.swift */; };
+		793C32E72A4CBE3E006E23A3 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793C32E62A4CBE3E006E23A3 /* LoginView.swift */; };
 		79587F182A4C6E8900B7F4D0 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79587F172A4C6E8900B7F4D0 /* FeedView.swift */; };
 		79587F1A2A4C6E9B00B7F4D0 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79587F192A4C6E9B00B7F4D0 /* FeedCell.swift */; };
 		7961F8B32A4B5B26004E00A6 /* SwiftagramApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7961F8B22A4B5B26004E00A6 /* SwiftagramApp.swift */; };
@@ -43,6 +44,7 @@
 		7930AE3F2A4B628F00B28F40 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		7930AE422A4B6F0B00B28F40 /* UserStatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatView.swift; sourceTree = "<group>"; };
 		793C32E42A4CB7DE006E23A3 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		793C32E62A4CBE3E006E23A3 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		79587F172A4C6E8900B7F4D0 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		79587F192A4C6E9B00B7F4D0 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		7961F8AF2A4B5B26004E00A6 /* Swiftagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swiftagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -230,6 +232,7 @@
 		7961F8E62A4B5D9E004E00A6 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				793C32E62A4CBE3E006E23A3 /* LoginView.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 				79587F1A2A4C6E9B00B7F4D0 /* FeedCell.swift in Sources */,
 				7930AE402A4B628F00B28F40 /* ProfileView.swift in Sources */,
 				7961F8B52A4B5B26004E00A6 /* ContentView.swift in Sources */,
+				793C32E72A4CBE3E006E23A3 /* LoginView.swift in Sources */,
 				7961F8B32A4B5B26004E00A6 /* SwiftagramApp.swift in Sources */,
 				793C32E52A4CB7DE006E23A3 /* SearchView.swift in Sources */,
 				7930AE432A4B6F0B00B28F40 /* UserStatView.swift in Sources */,
