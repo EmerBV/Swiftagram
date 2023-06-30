@@ -11,8 +11,7 @@ import SwiftUI
 struct SwiftagramApp: App {
     var body: some Scene {
         WindowGroup {
-            //ContentView()
-            MainTabView()
+            ContentView()
         }
     }
 }

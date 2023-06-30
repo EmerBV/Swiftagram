@@ -14,6 +14,8 @@ struct SearchView: View {
         NavigationStack {
             ScrollView {
                 LazyVStack(spacing: 12) {
+                    // UI
+                    /*
                     ForEach(0...10, id: \.self) { user in
                         HStack {
                             Image("emptyuser")
@@ -35,10 +37,51 @@ struct SearchView: View {
                         }
                         .padding(.horizontal)
                     }
+                    */
+                    
+                    // MOCK
+                    ForEach(User.MOCK_USERS) { user in
+                        NavigationLink(value: user) {
+                            HStack {
+                                Image(user.profileImageUrl ?? "")
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(width: 40, height: 40)
+                                    .background(.gray)
+                                .clipShape(Circle())
+                                
+                                VStack(alignment: .leading) {
+                                    Text(user.username)
+                                        .fontWeight(.semibold)
+                                    
+                                    if let fullname = user.fullname {
+                                        Text(fullname)
+                                    }
+                                }
+                                .font(.footnote)
+                                
+                                Spacer()
+                            }
+                            .foregroundColor(Color(UIColor.label))
+                            .padding(.horizontal)
+                        }
+                    }
                 }
                 .padding(.top, 8)
                 .searchable(text: $searchText, prompt: "Search...")
             }
+            
+            // UI
+            /*
+            .navigationDestination(for: User.self, destination: { user in ProfileView()
+                    .navigationBarBackButtonHidden()
+            })
+             */
+            
+            // MOCK
+            .navigationDestination(for: User.self, destination: { user in ProfileView(user: user)
+                    .navigationBarBackButtonHidden()
+            })
         }
     }
 }

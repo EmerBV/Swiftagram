@@ -26,7 +26,11 @@ struct MainTabView: View {
                 .tabItem {
                     Image(systemName: "play.square")
                 }
-            ProfileView ()
+            // UI
+            //CurrentUserProfileView ()
+            
+            // MOCK
+            CurrentUserProfileView (user: User.MOCK_USERS[0])
                 .tabItem {
                     Image(systemName: "person")
                 }
