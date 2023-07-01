@@ -33,6 +33,8 @@ struct CurrentUserProfileView: View {
         NavigationStack {
             ScrollView {
                 // Header
+                // UI
+                /*
                 VStack(spacing: 10) {
                     // Pic and stats
                     HStack {
@@ -93,12 +95,10 @@ struct CurrentUserProfileView: View {
                                 .cornerRadius(6)
                             
                             // Si queremos que tenga bordes
-                            /*
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 6)
-                                        .stroke(Color.gray, lineWidth: 1)
-                                )
-                             */
+                                //.overlay(
+                                    //RoundedRectangle(cornerRadius: 6)
+                                        //.stroke(Color.gray, lineWidth: 1)
+                                //)
                         }
                         
                         Button {
@@ -119,19 +119,23 @@ struct CurrentUserProfileView: View {
                 
                 // Post grid view
                 // UI
-                /*
                 LazyVGrid(columns: gridItems, spacing: 1) {
                     ForEach(0...15, id: \.self ) { index in
                         Image("noimage")
                             .resizable()
                             .scaledToFill()
+                            .frame(width: imageDimension, height: imageDimension)
+                            .clipped()
                     }
                 }
                  */
                 
                 // MOCK
+                ProfileHeaderView(user: user)
+                
                 PostGridView(posts: posts)
             }
+            // UI
             //.navigationTitle("Profile")
             //.navigationBarTitleDisplayMode(.inline)
             .toolbar {

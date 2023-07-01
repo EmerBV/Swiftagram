@@ -68,7 +68,7 @@ struct ProfileView: View {
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.horizontal)
-                 
+                
                 // Profile buttons
                 HStack {
                     Button {
@@ -110,8 +110,9 @@ struct ProfileView: View {
                 
                 Divider()
             }
-
+            
             // Post grid view
+            // UI
             LazyVGrid(columns: gridItems, spacing: 1) {
                 ForEach(0...15, id: \.self ) { index in
                     Image("noimage")
@@ -121,13 +122,14 @@ struct ProfileView: View {
                         .clipped()
                 }
             }
-             */
+            */
             
             // MOCK
             ProfileHeaderView(user: user)
             
             PostGridView(posts: posts)
         }
+        // UI
         //.navigationTitle("Profile")
         .navigationTitle(user.username)
         .navigationBarTitleDisplayMode(.inline)
