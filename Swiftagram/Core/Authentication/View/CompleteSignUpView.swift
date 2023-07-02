@@ -1,5 +1,5 @@
 //
-//  CreatePasswordView.swift
+//  CompleteSignUpView.swift
 //  Swiftagram
 //
 //  Created by Emerson Balahan Varona on 30/6/23.
@@ -7,33 +7,34 @@
 
 import SwiftUI
 
-struct CreatePasswordView: View {
-    @State private var password = ""
+struct CompleteSignUpView: View {
     @Environment(\.dismiss) var dismiss
+    
+    // DB
+    @EnvironmentObject var viewModel: RegistrationViewModel
     
     var body: some View {
         VStack(spacing: 12) {
-            Text("Create a password")
+            Spacer()
+            
+            Text("Welcome to Swiftagram, \(viewModel.username)")
                 .font(.title2)
                 .fontWeight(.bold)
                 .padding(.top)
+                .multilineTextAlignment(.center)
             
-            Text("Your password must be at least 6 characters in lenght")
+            Text("Click below to complete registration and start using Swiftagram")
                 .font(.footnote)
-                .foregroundColor(.gray)
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 24)
             
-            SecureField("Password", text: $password)
-                .autocapitalization(.none)
-                .modifier(IGTextFieldModifier())
-                .padding(.top)
-            
-            NavigationLink {
-                CompleteSignUpView()
-                    .navigationBarBackButtonHidden()
+            Button {
+                print("Complete sign up")
+                
+                // DB
+                Task { try await viewModel.createUser() }
             } label: {
-                Text("Next")
+                Text("Complete Sign Up")
                     .font(.subheadline)
                     .fontWeight(.semibold)
                     .foregroundColor(.white)
@@ -59,8 +60,8 @@ struct CreatePasswordView: View {
     }
 }
 
-struct CreatePasswordView_Previews: PreviewProvider {
+struct CompleteSignUpView_Previews: PreviewProvider {
     static var previews: some View {
-        CreatePasswordView()
+        CompleteSignUpView()
     }
 }

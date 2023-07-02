@@ -62,6 +62,8 @@ struct ProfileHeaderView: View {
                         .cornerRadius(6)
                 }
                 
+                //Spacer()
+                
                 Button {
                     
                 } label: {
@@ -73,6 +75,8 @@ struct ProfileHeaderView: View {
                         .foregroundColor(Color(UIColor.label))
                         .cornerRadius(6)
                 }
+                
+                //Spacer()
                 
                 Button {
                     

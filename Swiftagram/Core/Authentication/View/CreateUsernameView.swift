@@ -1,5 +1,5 @@
 //
-//  AddEmailView.swift
+//  CreateUsernameView.swift
 //  Swiftagram
 //
 //  Created by Emerson Balahan Varona on 30/6/23.
@@ -7,13 +7,18 @@
 
 import SwiftUI
 
-struct AddEmailView: View {
-    @State private var email = ""
+struct CreateUsernameView: View {
+    // UI
+    //@State private var username = ""
+    
     @Environment(\.dismiss) var dismiss
+    
+    // DB
+    @EnvironmentObject var viewModel: RegistrationViewModel
     
     var body: some View {
         VStack(spacing: 12) {
-            Text("Add your email")
+            Text("Create username")
                 .font(.title2)
                 .fontWeight(.bold)
                 .padding(.top)
@@ -24,13 +29,17 @@ struct AddEmailView: View {
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 24)
             
-            TextField("Email", text: $email)
+            // UI
+            //TextField("Username", text: $username)
+            
+            // DB
+            TextField("Username", text: $viewModel.username)
                 .autocapitalization(.none)
                 .modifier(IGTextFieldModifier())
                 .padding(.top)
             
             NavigationLink {
-                CreateUsernameView()
+                CreatePasswordView()
                     .navigationBarBackButtonHidden()
             } label: {
                 Text("Next")
@@ -51,7 +60,7 @@ struct AddEmailView: View {
                 Image(systemName: "chevron.left")
                     .imageScale(.large)
                     .onTapGesture {
-                        // Para poder volver hacia atrás 
+                        // Para poder volver hacia atrás
                         dismiss()
                     }
             }
@@ -59,8 +68,8 @@ struct AddEmailView: View {
     }
 }
 
-struct AddEmailView_Previews: PreviewProvider {
+struct CreateUsernameView_Previews: PreviewProvider {
     static var previews: some View {
-        AddEmailView()
+        CreateUsernameView()
     }
 }

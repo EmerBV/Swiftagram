@@ -1,5 +1,5 @@
 //
-//  CompleteSignUpView.swift
+//  AddEmailView.swift
 //  Swiftagram
 //
 //  Created by Emerson Balahan Varona on 30/6/23.
@@ -7,28 +7,42 @@
 
 import SwiftUI
 
-struct CompleteSignUpView: View {
+struct AddEmailView: View {
+    // UI
+    //@State private var email = ""
+    
     @Environment(\.dismiss) var dismiss
+    
+    // DB
+    @EnvironmentObject var viewModel: RegistrationViewModel
     
     var body: some View {
         VStack(spacing: 12) {
-            Spacer()
-            
-            Text("Welcome to Swiftagram, emer88")
+            Text("Add your email")
                 .font(.title2)
                 .fontWeight(.bold)
                 .padding(.top)
-                .multilineTextAlignment(.center)
             
-            Text("Click below to complete registration and start using Swiftagram")
+            Text("You'll use this email to sign in to your account")
                 .font(.footnote)
+                .foregroundColor(.gray)
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 24)
             
-            Button {
-                print("Complete sign up")
+            // UI
+            //TextField("Email", text: $email)
+            
+            // DATABASE
+            TextField("Email", text: $viewModel.email)
+                .autocapitalization(.none)
+                .modifier(IGTextFieldModifier())
+                .padding(.top)
+            
+            NavigationLink {
+                CreateUsernameView()
+                    .navigationBarBackButtonHidden()
             } label: {
-                Text("Complete Sign Up")
+                Text("Next")
                     .font(.subheadline)
                     .fontWeight(.semibold)
                     .foregroundColor(.white)
@@ -46,7 +60,7 @@ struct CompleteSignUpView: View {
                 Image(systemName: "chevron.left")
                     .imageScale(.large)
                     .onTapGesture {
-                        // Para poder volver hacia atrás
+                        // Para poder volver hacia atrás 
                         dismiss()
                     }
             }
@@ -54,8 +68,8 @@ struct CompleteSignUpView: View {
     }
 }
 
-struct CompleteSignUpView_Previews: PreviewProvider {
+struct AddEmailView_Previews: PreviewProvider {
     static var previews: some View {
-        CompleteSignUpView()
+        AddEmailView()
     }
 }
