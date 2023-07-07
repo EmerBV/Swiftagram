@@ -42,6 +42,8 @@
 		7961F8D02A4B5B27004E00A6 /* SwiftagramUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7961F8CF2A4B5B27004E00A6 /* SwiftagramUITestsLaunchTests.swift */; };
 		7961F8EA2A4B5FC8004E00A6 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7961F8E92A4B5FC8004E00A6 /* MainTabView.swift */; };
 		7972667C2A583C4400A2F027 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7972667B2A583C4400A2F027 /* LoginViewModel.swift */; };
+		7972667E2A58944100A2F027 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7972667D2A58944100A2F027 /* UserService.swift */; };
+		797266822A5896AA00A2F027 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797266812A5896AA00A2F027 /* SearchViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +98,8 @@
 		7961F8CF2A4B5B27004E00A6 /* SwiftagramUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftagramUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7961F8E92A4B5FC8004E00A6 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		7972667B2A583C4400A2F027 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		7972667D2A58944100A2F027 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		797266812A5896AA00A2F027 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,6 +249,7 @@
 		7961F8DC2A4B5CB3004E00A6 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				7972667D2A58944100A2F027 /* UserService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -291,7 +296,8 @@
 		7961F8E22A4B5D90004E00A6 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				793C32E42A4CB7DE006E23A3 /* SearchView.swift */,
+				7972667F2A5895C400A2F027 /* View */,
+				797266802A5895D000A2F027 /* ViewModel */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -349,6 +355,22 @@
 				794D17B02A50971100CFA17D /* UploadPostViewModel.swift */,
 			);
 			path = UploadPost;
+			sourceTree = "<group>";
+		};
+		7972667F2A5895C400A2F027 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				793C32E42A4CB7DE006E23A3 /* SearchView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		797266802A5895D000A2F027 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				797266812A5896AA00A2F027 /* SearchViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -497,6 +519,7 @@
 				7961F8B52A4B5B26004E00A6 /* ContentView.swift in Sources */,
 				793C32E72A4CBE3E006E23A3 /* LoginView.swift in Sources */,
 				794D17C02A50B39900CFA17D /* AuthService.swift in Sources */,
+				7972667E2A58944100A2F027 /* UserService.swift in Sources */,
 				793E82582A4F5B4300E55933 /* Post.swift in Sources */,
 				7961F8B32A4B5B26004E00A6 /* SwiftagramApp.swift in Sources */,
 				793E82542A4F0E7500E55933 /* CurrentUserProfileView.swift in Sources */,
@@ -514,6 +537,7 @@
 				793E824A2A4EF0AA00E55933 /* IGTextFieldModifier.swift in Sources */,
 				7930AE432A4B6F0B00B28F40 /* UserStatView.swift in Sources */,
 				79587F182A4C6E8900B7F4D0 /* FeedView.swift in Sources */,
+				797266822A5896AA00A2F027 /* SearchViewModel.swift in Sources */,
 				7961F8EA2A4B5FC8004E00A6 /* MainTabView.swift in Sources */,
 				793E824E2A4EF88E00E55933 /* CreatePasswordView.swift in Sources */,
 			);
