@@ -53,8 +53,16 @@ struct ProfileHeaderView: View {
             // Profile buttons
             HStack {
                 Button {
+                    // DB
+                    if user.isCurrentUser {
+                        print("Show edit profile")
+                    } else {
+                        print("Follow user...")
+                    }
                     
                 } label: {
+                    // UI
+                    /*
                     Text("Follow")
                         .font(.subheadline)
                         .fontWeight(.semibold)
@@ -62,6 +70,21 @@ struct ProfileHeaderView: View {
                         .background(Color(.systemBlue))
                         .foregroundColor(.white)
                         .cornerRadius(6)
+                     */
+                    
+                    // DB
+                    Text(user.isCurrentUser ? "Edit Profile" : "Follow")
+                        .font(.subheadline)
+                        .fontWeight(.semibold)
+                        .frame(width: 160, height: 32)
+                        .background(user.isCurrentUser ? Color(UIColor.systemGray6) : Color(UIColor.systemBlue))
+                        .foregroundColor(user.isCurrentUser ? Color(UIColor.label) : .white)
+                        .cornerRadius(6)
+                    /*
+                        .overlay(RoundedRectangle(cornerRadius: 6)
+                            .stroke(user.isCurrentUser ? .gray : .clear, lineWidth: 1)
+                        )
+                     */
                 }
                 
                 //Spacer()
