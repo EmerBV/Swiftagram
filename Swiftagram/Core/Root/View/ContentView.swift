@@ -20,8 +20,15 @@ struct ContentView: View {
                 LoginView()
                 // DB
                     .environmentObject(registrationViewModel)
+            /*
             } else {
                 MainTabView()
+            }
+             */
+            
+            // DB
+            } else if let currentUser = viewModel.currentUser {
+                MainTabView(user: currentUser)
             }
         }
     }

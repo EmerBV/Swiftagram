@@ -12,7 +12,7 @@ struct FeedCell: View {
     
     var body: some View {
         
-        // Descomentar para crear la UI
+        // UI
         /*
         VStack {
             // Image + username
@@ -96,7 +96,7 @@ struct FeedCell: View {
         }
          */
         
-        // Descomentar para simular con el MOCK
+        // MOCK
         VStack {
             // Image + username
             HStack {

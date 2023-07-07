@@ -41,6 +41,7 @@
 		7961F8CE2A4B5B27004E00A6 /* SwiftagramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7961F8CD2A4B5B27004E00A6 /* SwiftagramUITests.swift */; };
 		7961F8D02A4B5B27004E00A6 /* SwiftagramUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7961F8CF2A4B5B27004E00A6 /* SwiftagramUITestsLaunchTests.swift */; };
 		7961F8EA2A4B5FC8004E00A6 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7961F8E92A4B5FC8004E00A6 /* MainTabView.swift */; };
+		7972667C2A583C4400A2F027 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7972667B2A583C4400A2F027 /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,7 @@
 		7961F8CD2A4B5B27004E00A6 /* SwiftagramUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftagramUITests.swift; sourceTree = "<group>"; };
 		7961F8CF2A4B5B27004E00A6 /* SwiftagramUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftagramUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7961F8E92A4B5FC8004E00A6 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		7972667B2A583C4400A2F027 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				794D17C62A50EC3600CFA17D /* RegistrationViewModel.swift */,
+				7972667B2A583C4400A2F027 /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -501,6 +504,7 @@
 				793E825A2A4F6EA400E55933 /* PostGridView.swift in Sources */,
 				793E824C2A4EF2CF00E55933 /* CreateUsernameView.swift in Sources */,
 				794D17C42A50B70F00CFA17D /* ContentViewModel.swift in Sources */,
+				7972667C2A583C4400A2F027 /* LoginViewModel.swift in Sources */,
 				794D17C72A50EC3600CFA17D /* RegistrationViewModel.swift in Sources */,
 				794D17B12A50971100CFA17D /* UploadPostViewModel.swift in Sources */,
 				793E825C2A4F746400E55933 /* ProfileHeaderView.swift in Sources */,

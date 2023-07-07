@@ -146,7 +146,7 @@ struct CurrentUserProfileView: View {
                         Image(systemName: "lock")
                             .imageScale(.small)
                         
-                        Text("emer88")
+                        Text(user.username)
                             .font(.title2)
                             .fontWeight(.bold)
                             
@@ -165,7 +165,8 @@ struct CurrentUserProfileView: View {
                         }
                         
                         Button {
-                            
+                            // DB
+                            AuthService.shared.signout()
                         } label: {
                             Image(systemName: "line.3.horizontal")
                         }
