@@ -46,6 +46,7 @@
 		797266822A5896AA00A2F027 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797266812A5896AA00A2F027 /* SearchViewModel.swift */; };
 		797266842A58CB5900A2F027 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797266832A58CB5900A2F027 /* EditProfileView.swift */; };
 		797266882A58D6C400A2F027 /* EditProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797266872A58D6C400A2F027 /* EditProfileViewModel.swift */; };
+		7972668A2A5A203F00A2F027 /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797266892A5A203F00A2F027 /* ImageUploader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +105,7 @@
 		797266812A5896AA00A2F027 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		797266832A58CB5900A2F027 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
 		797266872A58D6C400A2F027 /* EditProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewModel.swift; sourceTree = "<group>"; };
+		797266892A5A203F00A2F027 /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				7972667D2A58944100A2F027 /* UserService.swift */,
+				797266892A5A203F00A2F027 /* ImageUploader.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -552,6 +555,7 @@
 				794D17C42A50B70F00CFA17D /* ContentViewModel.swift in Sources */,
 				797266842A58CB5900A2F027 /* EditProfileView.swift in Sources */,
 				7972667C2A583C4400A2F027 /* LoginViewModel.swift in Sources */,
+				7972668A2A5A203F00A2F027 /* ImageUploader.swift in Sources */,
 				794D17C72A50EC3600CFA17D /* RegistrationViewModel.swift in Sources */,
 				794D17B12A50971100CFA17D /* UploadPostViewModel.swift in Sources */,
 				793E825C2A4F746400E55933 /* ProfileHeaderView.swift in Sources */,
