@@ -362,8 +362,8 @@
 		7961F8E82A4B5E00004E00A6 /* UploadPost */ = {
 			isa = PBXGroup;
 			children = (
-				794D17AE2A508E8400CFA17D /* UploadPostView.swift */,
-				794D17B02A50971100CFA17D /* UploadPostViewModel.swift */,
+				7978C5032A5DCE040057095E /* View */,
+				7978C5022A5DCDF40057095E /* ViewModel */,
 			);
 			path = UploadPost;
 			sourceTree = "<group>";
@@ -399,6 +399,22 @@
 				793E82532A4F0E7500E55933 /* CurrentUserProfileView.swift */,
 				793E825B2A4F746400E55933 /* ProfileHeaderView.swift */,
 				797266832A58CB5900A2F027 /* EditProfileView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7978C5022A5DCDF40057095E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				794D17B02A50971100CFA17D /* UploadPostViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7978C5032A5DCE040057095E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				794D17AE2A508E8400CFA17D /* UploadPostView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
