@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct FeedView: View {
+    // DB
+    @StateObject var viewModel = FeedViewModel()
+    
     var body: some View {
         NavigationStack {
             // UI
@@ -60,9 +63,57 @@ struct FeedView: View {
         */
             
             // MOCK
+            /*
             ScrollView {
                 LazyVStack(spacing: 32) {
                     ForEach(Post.MOCK_POSTS) { post in FeedCell(post: post)
+                    }
+                }
+                .padding(.top, 8)
+            }
+
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button {
+                        
+                    } label: {
+                        Image("logo")
+                            .resizable()
+                            .frame(width: 120, height: 32)
+                        Image(systemName: "chevron.down")
+                            .imageScale(.small)
+                            .foregroundColor(Color(UIColor.label))
+                            .frame(width: 3)
+                        
+                    }
+                }
+                
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    HStack(spacing: 16) {
+                        Button {
+                            
+                        } label: {
+                            Image(systemName: "heart")
+                                .imageScale(.large)
+                                .foregroundColor(Color(UIColor.label))
+                        }
+                        
+                        Button {
+                            
+                        } label: {
+                            Image(systemName: "paperplane")
+                                .imageScale(.large)
+                                .foregroundColor(Color(UIColor.label))
+                        }
+                    }
+                }
+            }
+            */
+            
+            // DB
+            ScrollView {
+                LazyVStack(spacing: 32) {
+                    ForEach(viewModel.posts) { post in FeedCell(post: post)
                     }
                 }
                 .padding(.top, 8)
