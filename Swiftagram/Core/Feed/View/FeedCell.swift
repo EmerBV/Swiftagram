@@ -193,6 +193,14 @@ struct FeedCell: View {
             HStack {
                 if let user = post.user {
                     CircularProfileImageView(user: user, size: .xSmall)
+                        .overlay(
+                            Circle()
+                                .stroke(
+                                    LinearGradient(colors: [.blue, .purple, .red, .pink, .yellow, .orange], startPoint: .topLeading, endPoint: .bottomTrailing)
+                                    , lineWidth: 2
+                                )
+                                .frame(width: 45, height: 45)
+                        )
                     
                     Text(user.username)
                         .font(.footnote)

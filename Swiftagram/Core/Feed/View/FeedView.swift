@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct FeedView: View {
+    
+    let user: User
+    
     // DB
     @StateObject var viewModel = FeedViewModel()
     
@@ -112,6 +115,9 @@ struct FeedView: View {
             
             // DB
             ScrollView {
+                StoryView()
+                    .padding(.top, 8)
+                
                 LazyVStack(spacing: 32) {
                     ForEach(viewModel.posts) { post in FeedCell(post: post)
                     }
@@ -161,6 +167,7 @@ struct FeedView: View {
 
 struct FeedView_Previews: PreviewProvider {
     static var previews: some View {
-        FeedView()
+        //FeedView()
+        FeedView(user: User.MOCK_USERS[0])
     }
 }
