@@ -23,11 +23,13 @@ struct CurrentUserProfileView: View {
      */
     
     // MOCK
+    /*
     var posts: [Post] {
         return Post.MOCK_POSTS.filter({
             $0.user?.username == user.username
         })
     }
+     */
     
     var body: some View {
         NavigationStack {
@@ -130,10 +132,14 @@ struct CurrentUserProfileView: View {
                 }
                  */
                 
-                // MOCK
+                // MOCK & DB
                 ProfileHeaderView(user: user)
                 
-                PostGridView(posts: posts)
+                // MOCK
+                //PostGridView(posts: posts)
+                
+                // DB
+                PostGridView(user: user)
             }
             // UI
             //.navigationTitle("Profile")
@@ -183,7 +189,7 @@ struct CurrentUserProfileView_Previews: PreviewProvider {
         // UI
         //CurrentUserProfileView()
         
-        // MOCK
+        // MOCK & DB
         CurrentUserProfileView(user: User.MOCK_USERS[0])
     }
 }

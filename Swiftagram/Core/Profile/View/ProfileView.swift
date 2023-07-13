@@ -25,11 +25,13 @@ struct ProfileView: View {
      */
     
     // MOCK
+    /*
     var posts: [Post] {
         return Post.MOCK_POSTS.filter({
             $0.user?.username == user.username
         })
     }
+     */
     
     var body: some View {
         ScrollView {
@@ -124,10 +126,14 @@ struct ProfileView: View {
             }
             */
             
-            // MOCK
+            // MOCK & DB
             ProfileHeaderView(user: user)
             
-            PostGridView(posts: posts)
+            // MOCK
+            //PostGridView(posts: posts)
+            
+            // DB
+            PostGridView(user: user)
         }
         // UI
         //.navigationTitle("Profile")
