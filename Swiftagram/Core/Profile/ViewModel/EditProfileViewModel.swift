@@ -55,14 +55,14 @@ class EditProfileViewModel: ObservableObject {
         
         // Update name if change
         if !fullname.isEmpty && user.fullname != fullname {
-            print("DEBUG: Update fullname \(fullname)")
+            print("DEBUG: Update fullname: \(fullname)")
             // DB
             data["fullname"] = fullname
         }
         
         // Update bio if change
         if !bio.isEmpty && user.bio != bio {
-            print("DEBUG: Update bio \(bio)")
+            print("DEBUG: Update bio: \(bio)")
             // DB
             data["bio"] = bio
         }
